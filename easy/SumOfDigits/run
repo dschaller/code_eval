@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo "Sum Of Digits"
+
+echo "Input:"
+echo "$(<SumOfDigitsInput.txt)"
+
+echo "Output:"
+java SumOfDigits SumOfDigitsInput.txt

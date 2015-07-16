@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [ $# -eq 0 ]; then
+  echo "Please specify which project to compile and run from the following:"
+  ls -d */*
+else
+  CURRENT_DIRECTORY=$(pwd)
+  cd $1
+  javac *.java
+  ./run
+  cd $CURRENT_DIRECTORY
+  rm $1/*.class
+fi

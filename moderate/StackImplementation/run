@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo "Stack Implementation"
+
+echo "Input:"
+echo "$(<StackInput.txt)"
+
+echo "Output:"
+java AlternatingStackValues StackInput.txt
