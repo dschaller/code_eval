@@ -1,4 +1,3 @@
-
 import java.util.List;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -6,10 +5,16 @@ import java.nio.file.Paths;
 import java.nio.charset.Charset;
 import java.io.IOException;
 
-public class SumOfDigits {
-
+public class Main {
     public static void main(String[] args) {
-        sumNumberOfRowsIn(linesFromFile(args[0]));
+        sumIntegersInFile(args[0]);
+    }
+
+    private static void sumIntegersInFile(String filename) {
+        List<String> lines = linesFromFile(filename);
+        int total = 0;
+        for (String line : lines) total += Integer.valueOf(line);
+        System.out.println(total);
     }
 
     private static List<String> linesFromFile(String filename) {
@@ -19,16 +24,5 @@ public class SumOfDigits {
         } catch (IOException e) {
             throw new RuntimeException("Could not read file: " + filename);
         }
-    }
-
-    private static void sumNumberOfRowsIn(List<String> lines) {
-        for (String line : lines)
-            System.out.println(totalOfNumbersIn(line));
-    }
-
-    private static int totalOfNumbersIn(String line) {
-        int lineLength = line.length();
-        if (lineLength == 1) return Character.getNumericValue(line.charAt(0));
-        return totalOfNumbersIn(line.substring(0, lineLength-1)) + Character.getNumericValue(line.charAt(lineLength-1));
     }
 }

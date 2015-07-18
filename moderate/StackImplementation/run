@@ -3,7 +3,7 @@
 echo "Stack Implementation"
 
 echo "Input:"
-echo "$(<StackInput.txt)"
+echo "$(<Input.txt)"
 
 echo "Output:"
-java AlternatingStackValues StackInput.txt
+java Main Input.txt

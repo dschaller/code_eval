@@ -6,7 +6,7 @@ import java.nio.charset.Charset;
 import java.io.IOException;
 import java.lang.IllegalArgumentException;
 
-public class AlternatingStackValues {
+public class Main {
 
     public static void main(String[] args) {
         if (args.length != 1)
@@ -30,7 +30,7 @@ public class AlternatingStackValues {
 
     private static Stack pushOnToStackAllIntegersWithin(String line) {
         String[] stackInput = line.split(" ");
-        Stack stack = new AlternatingStackValues().new Stack(stackInput.length);
+        Stack stack = new Main().new Stack(stackInput.length);
         for (int i=0; i<stackInput.length; i++)
             stack.push(Integer.valueOf(stackInput[i]));
         return stack;

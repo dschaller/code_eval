@@ -3,7 +3,7 @@
 echo "Fibonacci Series"
 
 echo "Input:"
-echo "$(<FibonacciSeriesInput.txt)"
+echo "$(<Input.txt)"
 
 echo "Output:"
-java Main FibonacciSeriesInput.txt
+java Main Input.txt
