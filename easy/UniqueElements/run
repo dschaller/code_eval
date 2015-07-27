@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo "Unique Elements"
+
+echo "Input:"
+echo "$(<Input.txt)"
+
+echo "Output:"
+java Main Input.txt
