@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo "Capitalize Words"
+
+echo "Input:"
+echo "$(<Input.txt)"
+
+echo "Output:"
+java Main Input.txt
